@@ -15,13 +15,13 @@ of the Zuri x I4G Training Cohort II.
 ## Table of Contents
 
  - [Scope of Functionality](#scope-of-functionality)
- - [Design Samples ](https://github.com/matiassingers/awesome-readme)
- - [Usage](https://readme.so/editor)
- - [Settings](https://readme.so/editor)
- - [Policy](https://readme.so/editor)
- - [Languages](https://readme.so/editor)
- - [Authors](https://readme.so/editor)
- - [Acknowledgements](https://readme.so/editor)
+ - [Design Samples ](#design-samples)
+ - [Usage](#usage)
+ - [Settings](#settings)
+ - [Policy](#policy)
+ - [Languages](#languages)
+ - [Authors](#authors)
+ - [Acknowledgements](#acknowledgements)
 
 
 
@@ -56,6 +56,8 @@ There are xxx available design templates on the library
 
 
 ## Policy
+
+
 ## Languages
 - Design
     
@@ -67,7 +69,7 @@ There are xxx available design templates on the library
 
 ## Authors
 
-- [@](https://www.github.com/)
+<!-- - [@](https://www.github.com/) -->
 - [@Ser2kay](https://www.github.com/ser2kay)
 - [@E-nigm-a](https://www.github.com/e-nigm-a)
 - [@Ecstasywonder](https://www.github.com/ecstasywonder)
