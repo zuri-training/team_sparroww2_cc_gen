@@ -1,27 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InstaCard | Home </title>
+    <link rel="stylesheet" href="./assets/styles/cross-page/normalize.css">
     <link rel="stylesheet" href="./assets/styles/index.css">
 </head>
+
 <body>
     <header>
         <div class="container">
-            <a href="#">InstaCard</a>
+            <a href="#">
+                <img src="./assets//images/logo-green.png" alt="">
+            </a>
             <nav>
-                <ul>
+                <ul class="section-links activ">
+                    <button>close</button>
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#about-us">About&nbsp;Us</a></li>
                     <li><a href="#cards">Cards</a></li>
                     <li><a href="#faqs">FAQs</a></li>
-                    <li><a href="/sign-up.html" class="btn btn-filled btn-sm">Sign&nbsp;Up</a></li>
-                    <li><a href="/login.html" class="btn btn-outline btn-md">Log&nbsp;In</a></li>
+                </ul>
+
+                <ul class="external-links">
+                    <li><a href="/sign-up.html" class="btn btn-filled btn-sm sign-up">Sign&nbsp;Up</a></li>
+                    <li><a href="/login.html" class="btn btn-outline btn-md login">Log&nbsp;In</a></li>
                 </ul>
             </nav>
+            <div class="menu">
+                <button>M</button>
+            </div>
         </div>
     </header>
+    <main>
+        <div class="container">
+            <section class="hero" id="hero">
+                <div class="grid">
+                    <div class="grid-text">
+                        <h1>
+                            Download your <br>
+                            <span>Credit cards</span><br>
+                            instantly
+                        </h1>
+                        <p>Get ease access to varieties of credit cards.</p>
+                        <button class="cta">Sign Up</button>
+                    </div>
+                    <div class="grid-image">
+                        <img src="./assets/images/hero.png" alt="credit cards desplay">
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-us" id="about-us">
+                <div class="grid">
+                    <div class="grid-text">
+                        <h2 class="title">About Us</h2>
+                        <p>We give you a Credit card design with a classy and existing looks. Our Credit cards are
+                            designed by our best designers. You also get a chance to share your designs and download
+                            them, check out what credit card designs people like and are trending. Trust us to give you
+                            the best</p>
+                        <button class="cta">Learn more</button>
+                    </div>
+                    <div class="grid-image">
+                        <img src="./assets/images/about-us.png" alt="credit cards display">
+                    </div>
+                </div>
+            </section>
+            <section class="cards" id="cards">
+                <h2 class="title c-align">Cards Gallery</h2>
+                <div class="top-rated">
+                    <header>
+                        <p>Top rated</p>
+                        <a href="#">See all</a>
+                    </header>
+                    <div class="cards-container">
+
+                    </div>
+                </div>
+                <div class="others">
+                    <header>
+                        <select name="category" id="category">
+                            <option value="gradient">Gradient</option>
+                        </select>
+                        <a href="#">See all</a>
+                    </header>
+                    <div class="cards-container">
+
+                    </div>
+                </div>
+            </section>
+            <section class="testimonials">
+                <div>
+                    <h2 class="title c-align">What Users Think of Us</h2>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="" alt="avatar">
+                        <p>This is actually awesome, now I can pick what I want my credit card to look like. I like the
+                            fact that I can share my favorite designs.</p>
+                        <div>
+                            <h4>Robert Fox</h4>
+                            <div class="stars">
+                                <p>******</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="" alt="avatar">
+                        <p>I love the card designs, they are so unique. I can actually download a design I like and Use
+                            it, that is so awesome and lit</p>
+                        <div>
+                            <h4>Wade Warren</h4>
+                            <div class="stars">
+                                <p>******</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="" alt="avatar">
+                        <p>I like the fact that it is free and I can explore a lot of options before i pick the one I
+                            really loven And the page is user friendly.</p>
+                        <div>
+                            <h4>Elizabeth Anderson</h4>
+                            <div class="stars">
+                                <p>******</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact-us">
+                <h2 class="title c-align">We Are Waiting to Hear from you</h2>
+                <div class="grid">
+                    <div class="grid-text">
+                        <form>
+                            <input type="text" placeholder="Name" name="name" id="name" required>
+                            <input type="email" name="email" id="email" required>
+                            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                        </form>
+                    </div>
+                    <div class="grid-image">
+                        <img src="" alt="person making phone call">
+                    </div>
+                </div>
+                <button>Contact Us</button>
+            </section>
+            <section class="faqs" id="faqs"></section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
 </body>
+
 </html>
