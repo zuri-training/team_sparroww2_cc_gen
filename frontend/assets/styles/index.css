@@ -31,24 +31,33 @@ img {
 }
 
 section {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border: #666 solid 2px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    /* border: #666 solid 2px; */
 }
 
 h2.title {
     position: relative;
-    padding: .125rem 0rem .125rem 1rem;
-    width: fit-content;
+    padding: .125rem 0rem .125rem 0;
 }
 
-h2.title::before {
-    content: '';
+h2.title span {
+    position: relative;
     background-color: var(--green);
+}
+h2.title span::before {
     position: absolute;
+    background-color: var(--green);
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
-    width: .125em;
-    height: 100%;
+    width: .15rem;
+    height: 1.5em;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 
 .container {
@@ -64,13 +73,23 @@ h2.title::before {
 /* HEADER STYLES */
 header .menu {
     position: fixed;
-    right: .5rem;
+    right: 0rem;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+}
+header .menu button{
+    background-color: transparent;
+    border: none;
+    font-size: 1.75rem;
+    padding: 0;
+    color: var(--green);
+}
+header .menu button i{
+    color: var(--green);
 }
 
 body>header {
@@ -209,9 +228,6 @@ header .btn-filled {
 }
 
 /* HERO STYLES */
-.hero{
-    border: #666 solid 2px;
-}
 .hero h1 span {
     color: var(--green);
 }
@@ -245,6 +261,10 @@ header .btn-filled {
     padding: .25rem 1.25rem;
 }
 @media screen and (min-width: 768px) {
+    section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
     .container {
         width: 85%;
         padding-right: 0;
