@@ -279,7 +279,7 @@ header .btn-filled {
     align-items: center;
     padding: 1rem 1rem;
     box-shadow: 0 0 18px #00000015;
-    max-width: 240px;
+    max-width: 280px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -294,7 +294,7 @@ header .btn-filled {
 .testimonials .stars{
     padding: 0;
 }
-.testimonials :is(.stars p, h4){
+.testimonials .stars p, . testimonials h4){
     margin: 0;
 }
 .testimonials .card > div i {
