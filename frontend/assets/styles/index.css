@@ -440,6 +440,8 @@ footer .social-media{
 }
 footer .social-media i{
     font-size: calc(1.5rem + 1vw);
+    margin-left: 5px;
+    margin-right: 5px;
 }
 footer .social-media i:hover, footer .social-media i:active{
     color: var(--green);
