@@ -85,18 +85,19 @@ This project is _in development_
 
 ## Authors
 
-- [@Ilyas1105](https://www.github.com/ilyas1105)
-- [@Molly23-ui](https://www.github.com/molly23-ui)
-- [@Ser2kay](https://www.github.com/ser2kay)
-- [@E-nigm-a](https://www.github.com/e-nigm-a)
-- [@Ecstasywonder](https://www.github.com/ecstasywonder)
-- [@Joy879](https://www.github.com/joy879)
-- [@DistinctionA](https://www.github.com/distinctiona)
-- [@Hephzieefy](https://www.github.com/hephzieefy)
-- [@Ayomydeh](https://www.github.com/ayomydeh)
-- [@Chisomchris](https://www.github.com/chisomchris)
-- [@Kemichris](https://www.github.com/kemichris)
-- [@FavB](https://www.github.com/favb)
+- [Ilyas Opebiyi](https://www.github.com/ilyas1105)
+- [Molayo Anjorin](https://www.github.com/molly23-ui)
+- [Kingsley Nnaji](https://www.github.com/ser2kay)
+- [Chukwuemeka Mba-Onu](https://www.github.com/e-nigm-a)
+- [Chinwendu Onyeanyi](https://www.github.com/ecstasywonder)
+- [Joy Wanjiru](https://www.github.com/joy879)
+- [Adewale Aina](https://www.github.com/distinctiona)
+- [Hephzibah Chukwudumebi](https://www.github.com/hephzieefy)
+- [Ayomide Ibitowa](https://www.github.com/ayomydeh)
+- [Christian Ezeanyaeche](https://www.github.com/chisomchris)
+- [Ekemini Christopher](https://www.github.com/kemichris)
+- [@Barau Favour](https://www.github.com/favb)
+- [Augustine Solomon](https://www.github.com/bobswacky)
 
 ## Acknowledgements
 
