@@ -141,8 +141,9 @@ header .container {
     padding-bottom: .65rem;
 }
 
-header img {
+header .logo img {
     height: 3rem;
+    width: auto;
 }
 
 header ul {
