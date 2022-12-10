@@ -1,5 +1,6 @@
 :root {
-    --black: #666;
+    --black: #333;
+    --gray: #666;
     --green: #35E194;
 }
 
@@ -33,7 +34,7 @@ img {
 section {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    /* border: #666 solid 2px; */
+    border: #666 solid 2px;
 }
 
 h2.title {
@@ -260,13 +261,67 @@ header .btn-filled {
     color: white;
     padding: .25rem 1.25rem;
 }
+/* TESTIMONIALS */
+.testimonials{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.testimonials .card-container{
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+.testimonials .card{
+    background-color: white;
+    border-radius: .25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem;
+    box-shadow: 0 0 18px #00000015;
+    max-width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.testimonials .card > div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 0;
+}
+.testimonials .stars{
+    padding: 0;
+}
+.testimonials :is(.stars p, h4){
+    margin: 0;
+}
+.testimonials .card > div i {
+    color: gold;
+    font-size: .75rem;
+}
+.testimonials .card > p{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.35em;
+}
+.testimonials .card img{
+    width: calc(5rem + 2vw);
+    height: calc(5rem + 2vw);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
 @media screen and (min-width: 768px) {
     section {
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
     .container {
-        width: 85%;
+        width: 80%;
         padding-right: 0;
     }
 
@@ -284,6 +339,10 @@ header .btn-filled {
         padding: 0;
         clip-path: none;
         align-items: center;
+        gap: 0;
+    }
+    header .section-links li + li{
+        margin-left: 1.5rem;
     }
 
     header .section-links.active {
@@ -351,5 +410,17 @@ header .btn-filled {
     .about-us .cta {
         color: white;
         padding: .25rem 1.25rem;
+    }
+    .testimonials .card-container{
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .testimonials .card-container{
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
