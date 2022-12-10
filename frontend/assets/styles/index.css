@@ -324,7 +324,7 @@ header .btn-filled {
     object-fit: cover;
     object-position: top center;
 }
-.contact-us :is(input, textarea){
+.contact-us input, .contact-us textarea{
     width: 100%;
     padding: .5rem;
 }
