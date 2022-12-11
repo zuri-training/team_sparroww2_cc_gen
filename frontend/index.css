@@ -397,7 +397,7 @@ header .btn-filled {
     width: 100%;
     margin: 0;
     background-color: #d7f9ea;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: .25rem;
     -webkit-border-radius: .25rem;
     -moz-border-radius: .25rem;
@@ -412,7 +412,7 @@ header .btn-filled {
 .faqs li {
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
     max-width: 768px;
 }
 
@@ -514,7 +514,36 @@ footer .social-media i:active {
 footer .copyrights {
     text-align: center;
 }
-
+/* CARDS SECTION */
+.cards img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+.cards header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-weight: 600;
+}
+.cards header a{
+    text-decoration: underline;
+}
+.cards-container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+.cards-container a{
+    padding: 1.25rem;
+    border-radius: .25em;
+    border: solid var(--black) 2px;
+    -webkit-border-radius: .25em;
+    -moz-border-radius: .25em;
+    -ms-border-radius: .25em;
+    -o-border-radius: .25em;
+}
 @media screen and (min-width: 768px) {
     section {
         padding-top: 4rem;

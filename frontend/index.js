@@ -22,7 +22,11 @@ questions.forEach(question => {
         }
     })
 })
-
+sectionLinks.forEach(li => {
+    li.addEventListener('click', () => {
+        mobileMenu.classList.remove('active')
+    })
+})
 menuBtn.addEventListener('click', (e) => {
     mobileMenu.classList.add('active')
 })
@@ -61,7 +65,6 @@ const sectionObserver = new IntersectionObserver(function (entries, sectionObser
     // threshold: 0.05
     rootMargin: '75px 0px -75px 0px'
 })
-console.log(document.querySelector('header').getBoundingClientRect())
 sections.forEach(section => {
     sectionObserver.observe(section)
 
