@@ -145,7 +145,14 @@ header .section-links li+li {
 header .section-links.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
-
+header .section-links .login{
+    margin-top: auto;
+    margin-bottom: 5rem;
+    display: block;
+}
+header .external-links .login{
+    display: none;
+}
 header .section-links button {
     position: absolute;
     top: 1.25rem;
@@ -153,9 +160,6 @@ header .section-links button {
     background-color: transparent;
     border: none;
     font-size: 2rem;
-}
-header .login{
-    font-size: .85rem;
 }
 header .container {
     display: flex;
@@ -209,8 +213,8 @@ header .btn-outline {
 }
 
 header .btn-filled {
+    border: solid 2px var(--green);
     background-color: var(--green);
-    border-color: var(--green);
     color: white;
 }
 
@@ -571,6 +575,12 @@ footer .copyrights {
         gap: 0;
     }
 
+    header .section-links .login{
+        display: none;
+    }
+    header .external-links .login{
+        display: block;
+    }
     header .section-links li+li {
         margin-left: 1.5rem;
     }
