@@ -48,8 +48,8 @@ img {
 }
 
 section {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 h2.title {
@@ -389,7 +389,7 @@ header .btn-filled {
 }
 
 .contact-us img {
-    max-height: 320px;
+    max-height: 240px;
     object-fit: cover;
     object-position: top center;
 }
@@ -696,7 +696,8 @@ footer .copyrights {
         height: 100%;
         width: 100%;
         object-fit: cover;
-        max-height: 330px;
+        max-height: 370px;
+
     }
 
     .contact-us .contact-grid-image {
