@@ -128,7 +128,7 @@ header .section-links {
     margin: 0;
     z-index: 10;
     flex-direction: column;
-    padding: 8rem 6rem 0 3rem;
+    padding: 5rem 6rem 0 3rem;
     gap: 1rem;
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
     transition: clip-path .1s ease-in;
@@ -141,7 +141,9 @@ header .section-links {
 header .section-links li+li {
     margin-top: 1rem;
 }
-
+header .section-links li:nth-of-type(4){
+    margin-bottom: 1.25rem;
+}
 header .section-links.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
