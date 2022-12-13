@@ -6,7 +6,7 @@ const sections = document.querySelectorAll('main .container > section')
 const questions = document.querySelectorAll('.question')
 const answers = document.querySelectorAll('.answer')
 const signUp = document.querySelector('.hero-grid-text button.cta')
-const signUpLink = document.querySelector('.external-links a.signup')
+const signUpLink = document.querySelector('.external-links .signup a')
 
 signUp.addEventListener('click', () => {
     signUpLink.click()
