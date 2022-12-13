@@ -16,11 +16,29 @@ questions.forEach(question => {
     question.addEventListener('click', e => {
         if (question.classList.contains('active')) {
             question.classList.remove('active')
+            question.querySelector('i').classList.remove('fa-angle-down')
+            question.querySelector('i').classList.add('fa-angle-right')
             answers.forEach(answer => {
                 answer.classList.remove('active')
             })
+        } else if([...questions].some(elem => elem.classList.contains('active'))){
+            const index = [...questions].findIndex(elem => elem.classList.contains('active'))
+            questions[index].querySelector('i').classList.remove('fa-angle-down')
+            questions[index].querySelector('i').classList.add('fa-angle-right')
+            questions.forEach(q => {
+                q.classList.remove('active')
+            })
+            question.classList.add('active')
+            question.querySelector('i').classList.remove('fa-angle-right')
+            question.querySelector('i').classList.add('fa-angle-down')
+            answers.forEach(answer => {
+                answer.classList.remove('active')
+            })
+            answers[[...questions].indexOf(question)].classList.add('active')
         } else {
             question.classList.add('active')
+            question.querySelector('i').classList.remove('fa-angle-right')
+            question.querySelector('i').classList.add('fa-angle-down')
             answers.forEach(answer => {
                 answer.classList.remove('active')
             })
