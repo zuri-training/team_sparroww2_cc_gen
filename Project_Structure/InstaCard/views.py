@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def home (request):
     user = request.user.username
-    return render(request, 'frontend/index.html')
+    return render(request, 'templates/index.html')
 
 def signup(request):
     if request.user.is_authenticated:
