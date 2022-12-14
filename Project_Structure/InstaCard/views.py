@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def home (request):
     user = request.user.username
-    return render(request, 'templates/index.html')
+    return render(request, 'dashboard.html', {'username':user})
 
 def signup(request):
     if request.user.is_authenticated:
@@ -22,13 +22,13 @@ def signup(request):
             password = form.cleaned_data.get("password1")
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('home')
+            return redirect('home') # shouldnt be login?
         else:
             form = UserCreationForm()
-            return render(request, 'frontend/login.html', {'form':form})
+            return render(request, 'signup.html', {'form':form})
     else:
         form = UserCreationForm()
-        return render(request, 'frontend/signup.html', {'form':form})
+        return render(request, 'signup.html', {'form':form})
 
 def login(request):
      if request.user.is_authenticated:
@@ -45,10 +45,10 @@ def login(request):
             return redirect('home')
         else:
             form = UserCreationForm()
-            return render(request, 'frontend/index.html', {'form':form})
+            return render(request, 'login.html', {'form':form})
      else:
         form = UserCreationForm()
-        return render(request, 'frontend/signup.html', {'form':form})
+        return render(request, 'login.html', {'form':form})
 
 
 def signout(request):
