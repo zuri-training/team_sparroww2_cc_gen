@@ -577,7 +577,7 @@ footer .copyrights {
 .cards-container a {
     padding: 1.25rem;
     border-radius: .25em;
-    border: solid var(--black) 2px;
+    /* border: solid var(--black) 2px; */
     -webkit-border-radius: .25em;
     -moz-border-radius: .25em;
     -ms-border-radius: .25em;
