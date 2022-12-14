@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Root Variables */
+:root {
+    /* Color Declaration */
+    --Primary: #35e194;
+    --white: #FFFFFF;
+    --Deepgrey: #383838;
+    --Lightgrey: #7A7A7A;
+    --Fog: #595959;
+    --MoonBlack: #1C1C1C;
+    --Ash: #C7C6C6;
+    /* Font Style */
+    --Poppins: 'Poppins',
+        sans-serif;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--Poppins);
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Ash);
+}
+
+.form-container {
+    display: flex;
+    height: 100vh;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: var(--Poppins);
+}
+
+/* styling the left container */
+.left-container {
+    background-color: var(--Primary);
+    width: 50%;
+    height: 115%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 70px;
+    margin: auto;
+    float: left;
+}
+
+.logo-insta {
+    max-width: 250px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0px 50px 80px;
+    margin: auto;
+}
+
+/* Styling the right container */
+.right-container {
+    background-color: var(--white);
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 115%;
+    padding: 150px 135px 8px 135px;
+    margin: auto;
+    float: right;
+
+}
+
+.box {
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 9px;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    font-size: 12px;
+    border: 1px solid #7a7a7a;
+    color: #0b0b0b;
+    background: transparent;
+    border-radius: 5px;
+    font-family: var(--Poppins);
+}
+
+h1 {
+    padding-bottom: 30px;
+}
+
+label,
+span,
+p {
+    font-size: x-small;
+}
+
+.label {
+    font-size: small;
+    font-weight: 600;
+    text-shadow: var(--Ash);
+}
+
+button {
+    background: var(--Primary);
+    color: var(--white);
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px 120px;
+    margin-top: 30px;
+
+}
+.eye {
+    position: absolute;
+    max-width: 65px;
+    padding: 22px 50px 5px 0px;
+    margin-left: -33px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 771px) {
+    .form-container {
+        display: inline-flex;
+        height: 120%;
+        width: fit-content;
+
+    }
+}

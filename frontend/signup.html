@@ -14,10 +14,12 @@
 
     <div class="form-container">
         <div class="left-container">
-            <img class="logo-insta" src="./assets/images/logo-instac.png" alt="logo">
-            <div class="text">
-                <span class="left-text">Welcome to</span>
-                <h3>Instacards</h3>
+            <div class="left-content">
+                <img class="logo-insta" src="./assets/images/logo-instac.png" alt="logo">
+                <div class="text">
+                    <span class="left-text">Welcome to</span>
+                    <h3>Instacards</h3>
+                </div>
             </div>
         </div>
         <div class="right-container">
@@ -37,8 +39,10 @@
 
                 <div>
                     <span class="label">password</span>
-                    <input class="box" type="password" name="" placeholder="********" id="" required>
-                    <i class='bx bx-hide eye-icon'></i>
+                    <div class="Pwd-toggle">
+                        <input class="box" type="password" name="" placeholder="********" id="id_password" required>
+                        <img class="eye" id="togglePassword" src="./assets/images/icons8-eye-24.png" alt="psd-eye">
+                    </div>
                 </div>
 
                 <div class="click">
@@ -50,8 +54,6 @@
                 <div class="button">
                     <button>Sign Up</button>
                 </div>
-            </form>
-
             <span class="hr"> Or </span>
 
             <a href="#" class="google">
@@ -61,12 +63,26 @@
 
 
             <div class="login">
-                <h5>Already have an account? <a href="">Log in</a></h5>
+                <h5>Already have an account? <a href="login.html">Log in</a></h5>
             </div>
+
+            </form>
 
 
         </div>
     </div>
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+            const password = document.querySelector('#id_password');
+
+            togglePassword.addEventListener('click', function(e)
+            {
+                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+                this.classList.toggle('fa-eye-slash');
+            });
+    </script>
 </body>
 
 </html>

@@ -31,20 +31,19 @@ body {
 
 .form-container {
     display: flex;
-    height: 90vh;
+    height: 100vh;
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    padding: 20px;
-    margin: auto;
-    border-radius: 30px;
+    width: 100%;
     font-family: var(--Poppins);
 }
 
 /* styling the left container */
 .left-container {
     background-color: var(--Primary);
+    width: 50%;
+    height: 115%;
     align-items: center;
     justify-content: center;
     padding: 10px 70px;
@@ -54,6 +53,8 @@ body {
 .logo-insta {
     max-width: 250px;
     width: 100%;
+    align-items: center;
+    justify-content: center;
     padding: 150px 50px 0px 50px;
     margin: auto;
 }
@@ -66,6 +67,11 @@ body {
     color: var(--white);
 }
 
+.left-content{
+    padding: 50px;
+    margin: auto;
+}
+
 .left-text {
     font-size: medium;
 }
@@ -75,7 +81,9 @@ body {
     background-color: var(--white);
     align-items: center;
     justify-content: center;
-    padding: 30px 150px 8px 70px;
+    width: 50%;
+    height: 115%;
+    padding: 30px 135px 8px 135px;
     margin: auto;
 
 }
@@ -85,6 +93,7 @@ body {
     padding: 10px 20px;
     margin-top: 9px;
     outline: none;
+    border: none;
     font-weight: 400;
     font-size: 12px;
     border: 1px solid #7a7a7a;
@@ -92,6 +101,10 @@ body {
     background: transparent;
     border-radius: 5px;
     font-family: var(--Poppins);
+}
+
+div > span{
+    padding-bottom: 250px;
 }
 
 label,
@@ -104,11 +117,22 @@ p {
     font-size: small;
 }
 
+.eye{
+    position: absolute;
+    max-width: 65px;
+    padding: 22px 50px 5px 0px;
+    margin-left: -33px;
+    cursor: pointer;
+}
+
 .click {
     margin-bottom: 10px;
     color: var(--MoonBlack);
     font-weight: 300;
     font-size: 12px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 1px;
 }
 
 .click input {
@@ -138,25 +162,25 @@ p {
     margin-top: 10px;
 }
 
-.hr:before,
+span:before,
 span:after {
     content: "";
     flex: 11;
     border-bottom: 1px solid #000;
+    padding-top: 5px;
     margin: auto;
 
 }
 
 .gle-logo {
-    max-width: 12px;
+    max-width: 15px;
+    margin-top: 10px;
 }
 
 .google {
     background-color: var(--Ash);
     color: var(--MoonBlack);
     justify-content: center;
-    padding: 10px 40px;
-    margin: auto;
     font-size: small;
     font-family: var(--Poppins);
     text-decoration: none;
@@ -170,12 +194,13 @@ a.google {
     border-radius: 5px;
 }
 
-a.google span {
+a > span {
     font-weight: 400;
     font-size: 13px;
     opacity: 0.6;
     color: var(--MoonBlack);
     border-radius: 5px;
+    padding: 0px 45px 0px 0px;
 }
 
 .button,
@@ -193,20 +218,36 @@ button {
 }
 
 button {
-    padding: 10px 120px;
+    padding: 10px 140px;
 }
 
 .login {
     justify-content: center;
     align-items: center;
     padding: 10px 40px;
+    margin: auto;
 }
 
-h5>a {
+h5 > a {
     color: var(--Primary);
 }
 
-label>a {
+label > a {
     text-decoration: none;
     color: var(--Primary);
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        width: fit-content;        
+    }
+}
+
+@media screen and (max-width: 771px) {
+    .form-container {
+        display:inline-flex;
+        height: 120%;
+        width: fit-content;
+       
+    }
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    <div class="left-container">
+        <img class="logo-insta" src="./assets/images/logo-instac.png" alt="logo">
+    </div>
+    
+    <div class="right-container">
+        <h1>Forgot Password?</h1>
+        <span>Create new password</span>
+    
+        <form action="#" onSubmit = "return checkPassword(this)">
+            <div>
+                <span class="label">Create New Password</span>
+                <div class="Pwd-toggle">
+                    <input class="box" type="password" name="password1" placeholder="********" id="id_password" required>
+                    <img class="eye" id="togglePassword" src="./assets/images/icons8-eye-24.png" alt="psd-eye">
+                </div>
+    
+                <span class="label">Re-enter Password</span>
+                <div class="Pwd-toggle">
+                    <input class="box" type="password" name="password2" placeholder="********" id="id_password" required>
+                    <img class="eye" id="togglePassword" src="./assets/images/icons8-eye-24.png" alt="psd-eye">
+                </div>
+            </div>
+    
+            <div class="button">
+                <a href="login.html">
+                    <button>Reset Password</button>
+                </a>
+            </div>
+        </form>
+    </div>
+    
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+            const password = document.querySelector('#id_password');
+
+            togglePassword.addEventListener('click', function (e) {
+                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+                this.classList.toggle('fa-eye-slash');
+            });
+
+             // Function to check Whether both passwords
+                // is same or not.
+                function checkPassword(form) {
+                    password1 = form.password1.value;
+                    password2 = form.password2.value;
+
+                    // If password not entered
+                    if (password1 == '')
+                        alert("Please enter Password");
+
+                    // If confirm password not entered
+                    else if (password2 == '')
+                        alert("Please enter confirm password");
+
+                    // If Not same return False.    
+                    else if (password1 != password2) {
+                        alert("\nPassword did not match: Please try again...")
+                        return false;
+                    }
+
+                    // If same return True.
+                    else {
+                        alert("Password Match: Welcome to InstaCards!")
+                        return true;
+                    }
+                }
+    </script>
+</body>
+</html>
