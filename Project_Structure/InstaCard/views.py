@@ -8,11 +8,11 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def home (request):
     user = request.user.username
-    return render(request, 'dashboard.html', {'username':user})
+    return render(request, 'templates/dashboard.html', {'username':user})
 
 def signup(request):
     if request.user.is_authenticated:
-        return redirect('home')
+        return redirect('login')
 
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -22,13 +22,13 @@ def signup(request):
             password = form.cleaned_data.get("password1")
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('home') # shouldnt be login?
+            return redirect('login') # shouldnt be login?
         else:
             form = UserCreationForm()
-            return render(request, 'signup.html', {'form':form})
+            return render(request, 'templates/signup.html', {'form':form})
     else:
         form = UserCreationForm()
-        return render(request, 'signup.html', {'form':form})
+        return render(request, 'templates/signup.html', {'form':form})
 
 def login(request):
      if request.user.is_authenticated:
@@ -45,14 +45,18 @@ def login(request):
             return redirect('home')
         else:
             form = UserCreationForm()
-            return render(request, 'login.html', {'form':form})
+            return render(request, 'templates/login.html', {'form':form})
      else:
         form = UserCreationForm()
-        return render(request, 'login.html', {'form':form})
+        return render(request, 'templates/login.html', {'form':form})
 
 
 def signout(request):
     logout(request)
     return redirect('login')
+
+def dashboard(request):
+    login(request)
+    return redirect('dashboard')
 
     
