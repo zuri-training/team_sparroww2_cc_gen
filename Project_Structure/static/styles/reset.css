@@ -48,6 +48,7 @@ body {
     justify-content: center;
     padding: 10px 70px;
     margin: auto;
+    float: left;
 }
 
 .logo-insta {
@@ -55,25 +56,8 @@ body {
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 150px 50px 0px 50px;
+    padding: 150px 0px 50px 80px;
     margin: auto;
-}
-
-.text {
-    align-items: center;
-    justify-content: center;
-    padding: 0px 80px 150px 100px;
-    margin: auto;
-    color: var(--white);
-}
-
-.left-content {
-    padding: 50px;
-    margin: auto;
-}
-
-.left-text {
-    font-size: medium;
 }
 
 /* Styling the right container */
@@ -83,8 +67,9 @@ body {
     justify-content: center;
     width: 50%;
     height: 115%;
-    padding: 30px 135px 8px 135px;
+    padding: 150px 135px 8px 135px;
     margin: auto;
+    float: right;
 
 }
 
@@ -103,8 +88,8 @@ body {
     font-family: var(--Poppins);
 }
 
-div>span {
-    padding-bottom: 250px;
+h1 {
+    padding-bottom: 30px;
 }
 
 label,
@@ -115,95 +100,10 @@ p {
 
 .label {
     font-size: small;
+    font-weight: 600;
+    text-shadow: var(--Ash);
 }
 
-.eye {
-    position: absolute;
-    max-width: 65px;
-    padding: 22px 50px 5px 0px;
-    margin-left: -33px;
-    cursor: pointer;
-}
-
-.click {
-    margin-bottom: 10px;
-    color: var(--MoonBlack);
-    font-weight: 300;
-    font-size: 12px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin: 1px;
-}
-
-.click input {
-    height: 0.8em;
-    width: 0.9em;
-    margin-top: 2px;
-    vertical-align: baseline;
-    cursor: pointer;
-}
-
-.click p {
-    font-size: 11px;
-}
-
-.sign-up {
-    background-color: var(--Primary);
-    color: var(--white);
-    justify-content: center;
-    padding: 10px 150px;
-    border-radius: 2px;
-}
-
-.hr {
-    display: block;
-    display: flex;
-    font-size: small;
-    margin-top: 10px;
-}
-
-span:before,
-span:after {
-    content: "";
-    flex: 11;
-    border-bottom: 1px solid #000;
-    padding-top: 5px;
-    margin: auto;
-
-}
-
-.gle-logo {
-    max-width: 15px;
-    margin-top: 10px;
-}
-
-.google {
-    background-color: var(--Ash);
-    color: var(--MoonBlack);
-    justify-content: center;
-    font-size: small;
-    font-family: var(--Poppins);
-    text-decoration: none;
-}
-
-a.google {
-    background-color: var(--Lightgrey);
-    background: transparent;
-    padding: 5px 33px;
-    border: 1px solid var(--Fog);
-    border-radius: 5px;
-}
-
-a>span {
-    font-weight: 400;
-    font-size: 13px;
-    opacity: 0.6;
-    color: var(--MoonBlack);
-    border-radius: 5px;
-    padding: 0px 45px 0px 0px;
-}
-
-.button,
 button {
     background: var(--Primary);
     color: var(--white);
@@ -214,28 +114,30 @@ button {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    padding: 10px 120px;
+    margin-top: 30px;
 
 }
 
-button {
-    padding: 10px 140px;
+.eye {
+    position: absolute;
+    max-width: 65px;
+    padding: 22px 50px 5px 0px;
+    margin-left: -33px;
+    cursor: pointer;
 }
 
-.login {
-    justify-content: center;
-    align-items: center;
-    padding: 10px 40px;
-    margin: auto;
-}
+/* button,
+input {
+    display: block;
+    margin-bottom: 10px;
+} */
 
-h5>a {
-    color: var(--Primary);
-}
-
-label>a {
-    text-decoration: none;
-    color: var(--Primary);
-}
+/* #alert {
+    display: hidden;
+    color: red;
+    margin-bottom: 10px;
+} */
 
 @media screen and (max-width: 1200px) {
     body {
