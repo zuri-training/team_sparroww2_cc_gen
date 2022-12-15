@@ -7,17 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instacard Signup</title>
 
-    <link rel="stylesheet" href="../static/styles/signup.css">
+    <link rel="stylesheet" href="/Project_Structure/static/styles/signup.css">
 </head>
 
 <body>
 
     <div class="form-container">
         <div class="left-container">
-            <img class="logo-insta" src="..//static/images/logo-instac.png" alt="logo">
-            <div class="text">
-                <span class="left-text">Welcome to</span>
-                <h3>Instacards</h3>
+            <div class="left-content">
+                <img class="logo-insta" src="/Project_Structure/static/images/logo-instac.png" alt="logo">
+                <div class="text">
+                    <span class="left-text">Welcome to</span>
+                    <h3>Instacards</h3>
+                </div>
             </div>
         </div>
         <div class="right-container">
@@ -32,41 +34,54 @@
 
                 <div>
                     <span class="label">Email Address</span>
-                    <input class="box" type="text" name="" placeholder="Instacards@gmail.com" id="" required>
+                    <input class="box" type="email" name="" placeholder="Instacards@gmail.com" id="" required>
                 </div>
 
                 <div>
                     <span class="label">password</span>
-                    <input class="box" type="password" name="" placeholder="********" id="" required>
-                    <i class='bx bx-hide eye-icon'></i>
+                    <div class="Pwd-toggle">
+                        <input class="box" type="password" name="" placeholder="********" id="id_password" required>
+                        <img class="eye" id="togglePassword" src="/Project_Structure/static/images/icons8-eye-24.png" alt="psd-eye">
+                    </div>
                 </div>
 
                 <div class="click">
-                    <input type="checkbox" id="" name="" value="">
+                    <input type="checkbox" id="" name="" value="" required>
                     <label>I've read and agreed with the <a href="">Terms & condition</a> and <a href="">Privacy
                             policy</a></label>
                 </div>
 
                 <div class="button">
-                    <button>Sign Up</button>
+                    <button onsubmit="">Sign Up</button>
                 </div>
+                <span class="hr"> Or </span>
+
+                <a href="#" class="google">
+                    <img class="gle-logo" src="/Project_Structure/static/images/gmail.logo.png" alt="G-mail">
+                    <span>Sign up with your google account</span>
+                </a>
+
+
+                <div class="login">
+                    <h5>Already have an account? <a href="login.html">Log in</a></h5>
+                </div>
+
             </form>
-
-            <span class="hr"> Or </span>
-
-            <a href="#" class="google">
-                <img class="gle-logo" src="../static/images/gmail.logo.png" alt="G-mail">
-                <span>Sign up with your google account</span>
-            </a>
-
-
-            <div class="login">
-                <h5>Already have an account? <a href="./login.html">Log in</a></h5>
-            </div>
 
 
         </div>
     </div>
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#id_password');
+
+        togglePassword.addEventListener('click', function (e) {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
 </body>
 
 </html>
