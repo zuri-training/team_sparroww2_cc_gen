@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def home (request):
     user = request.user.username
-    return render(request, 'templates/dashboard.html', {'username':user})
+    return render(request, 'index.html', {'username':user})
 
 def signup(request):
     if request.user.is_authenticated:
@@ -25,14 +25,14 @@ def signup(request):
             return redirect('login') # shouldnt be login?
         else:
             form = UserCreationForm()
-            return render(request, 'templates/signup.html', {'form':form})
+            return render(request, 'signup.html', {'form':form})
     else:
         form = UserCreationForm()
-        return render(request, 'templates/signup.html', {'form':form})
+        return render(request, 'signup.html', {'form':form})
 
 def login(request):
      if request.user.is_authenticated:
-        return redirect('home')
+        return redirect('dashboard')
 
      if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -45,10 +45,10 @@ def login(request):
             return redirect('home')
         else:
             form = UserCreationForm()
-            return render(request, 'templates/login.html', {'form':form})
+            return render(request, 'login.html', {'form':form})
      else:
         form = UserCreationForm()
-        return render(request, 'templates/login.html', {'form':form})
+        return render(request, 'login.html', {'form':form})
 
 
 def signout(request):
@@ -56,7 +56,11 @@ def signout(request):
     return redirect('login')
 
 def dashboard(request):
-    login(request)
-    return redirect('dashboard')
+    if request.user.is_authenticated:
+        return redirect('dashboard')
+    else:
+        form = UserCreationForm()
+        return render(request, 'dashboard.html', {'form':form})
+    
 
     
