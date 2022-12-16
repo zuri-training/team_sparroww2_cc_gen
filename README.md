@@ -81,7 +81,7 @@ There are xxx available design templates on the library:
 
 ## Project Status
 
-This project is _in development_
+This project is _in development_. It is currently hosted at: https://instacard.onrender.com
 
 ## Authors
 
@@ -96,7 +96,7 @@ This project is _in development_
 - [Ayomide Ibitowa](https://www.github.com/ayomydeh)
 - [Christian Ezeanyaeche](https://www.github.com/chisomchris)
 - [Ekemini Christopher](https://www.github.com/kemichris)
-- [@Barau Favour](https://www.github.com/favb)
+- [Barau Favour](https://www.github.com/favb)
 - [Augustine Solomon](https://www.github.com/bobswacky)
 
 ## Acknowledgements
