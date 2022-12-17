@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: flex;
+}
+
+
+/* styling for the menu  */
+
+.menu-container {
+    width: 293px;
+    height: 100%;
+    /* padding-bottom: 60px; */
+    /* position: fixed; */
+}
+
+.menu-container img {
+    margin-left: 60px;
+}
+
+.menu-container h1 {
+    margin-left: 40px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.menu-icons {
+    margin-left: 24px;
+    width: fit-content;
+    display: flex;
+    height: 48px;
+    align-items: center;
+    margin-bottom: 60px;
+    justify-content: center;
+    padding: 0 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-icons:hover {
+    background-color: #E7F8F6;
+}
+
+.menu-icons img {
+    width: 24px;
+    height: 24px;
+    margin-left: 0;
+}
+
+.menu-icons h3 {
+    font-size: 15px;
+    margin-left: 16px;
+  
+}
+
+.explore h3 {
+    color: white;
+}
+
+.explore {
+    background-color: #35E194;
+    ;
+}
+
+
+
+/* styling for the card section  */
+
+
+.card-section {
+    width: 100%;
+    padding-top: 4rem;
+    background-color: #1E1E1E;
+}
+
+.search-user {
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+    align-items: center;
+}
+
+.search-user input {
+    width: 923px;
+    height: 60px;
+    border-radius: 5px;
+    margin-left: 40px;
+    padding-left: 1rem;
+}
+
+.profile-photo {
+    width: 50px;
+    height: 50px;
+    margin-right: 2rem;
+    border-radius: 50%;
+    background-color: white;
+} 
+
+.credit-type {
+    display: flex;
+    justify-content: space-around;
+}
+
+.credit-type h3 {
+    font-size: 18px;
+    color: white;
+}
+
+.active {
+    background-color: #35E194;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.first-card-container, .second-card-container, .third-card-container {
+    display: flex;
+    margin-left: 40px;
+}
+
+.img-cont {
+    border: 1px solid white;
+    padding: 1rem;
+}
+
+.img2, .img3 {
+    margin-left: 1rem;
+}
+
+.icons, .icons2, .icons3 {
+    margin-left: 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.icons3 {
+    margin-bottom: 3rem;
+}
+
+ .icons img, .icons2 img, .icons3 img {
+    margin-left: 3rem;
+}
