@@ -5,6 +5,13 @@ from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
+def landing (request):
+    if request.user.is_authenticated:
+        return redirect('home')
+
+    else:
+        return render(request, 'index.html')
+
 @login_required
 def home (request):
     user = request.user.username
@@ -12,7 +19,7 @@ def home (request):
 
 def signup(request):
     if request.user.is_authenticated:
-        return redirect('login')
+        return redirect('home')
 
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -21,8 +28,8 @@ def signup(request):
             username = form.cleaned_data.get("username")
             password = form.cleaned_data.get("password1")
             user = authenticate(username=username, password=password)
-            login(request, user)
-            return redirect('login') # shouldnt be login?
+            # login(request, user)
+            return redirect('login') 
         else:
             form = UserCreationForm()
             return render(request, 'signup.html', {'form':form})
@@ -32,7 +39,7 @@ def signup(request):
 
 def login(request):
      if request.user.is_authenticated:
-        return redirect('dashboard')
+        return redirect('home')
 
      if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -54,13 +61,3 @@ def login(request):
 def signout(request):
     logout(request)
     return redirect('login')
-
-def dashboard(request):
-    if request.user.is_authenticated:
-        return redirect('dashboard')
-    else:
-        form = UserCreationForm()
-        return render(request, 'dashboard.html', {'form':form})
-    
-
-    
