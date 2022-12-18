@@ -2,17 +2,25 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .models import *
 
 
 # Create your views here.
+def landing (request):
+    if request.user.is_authenticated:
+        return redirect('home')
+
+    else:
+        return render(request, 'index.html')
+
 @login_required
 def home (request):
-    user = request.user.username
-    return render(request, 'templates/dashboard.html', {'username':user})
+    # user = request.user.username
+    return render(request, 'dashboard.html', {'username':user})
 
 def signup(request):
     if request.user.is_authenticated:
-        return redirect('login')
+        return redirect('home')
 
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -21,14 +29,14 @@ def signup(request):
             username = form.cleaned_data.get("username")
             password = form.cleaned_data.get("password1")
             user = authenticate(username=username, password=password)
-            login(request, user)
-            return redirect('login') # shouldnt be login?
+            # login(request, user) #leave as comment
+            return redirect('login')
         else:
             form = UserCreationForm()
-            return render(request, 'templates/signup.html', {'form':form})
+            return render(request, 'signup.html', {'form':form})
     else:
         form = UserCreationForm()
-        return render(request, 'templates/signup.html', {'form':form})
+        return render(request, 'signup.html', {'form':form})
 
 def login(request):
      if request.user.is_authenticated:
@@ -45,18 +53,18 @@ def login(request):
             return redirect('home')
         else:
             form = UserCreationForm()
-            return render(request, 'templates/login.html', {'form':form})
+            return render(request, 'login.html', {'form':form})
      else:
         form = UserCreationForm()
-        return render(request, 'templates/login.html', {'form':form})
+        return render(request, 'login.html', {'form':form})
 
 
 def signout(request):
     logout(request)
     return redirect('login')
 
-def dashboard(request):
-    login(request)
-    return redirect('dashboard')
+# def dashboard(request):
+#     login(request)
+#     return redirect('dashboard')
 
     
